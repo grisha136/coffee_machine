@@ -11,6 +11,7 @@
 // ==/UserScript==
 
 let searchInput = document.querySelector('.input__control.input__input.mini-suggest__input');
+let nextPageButton = document.getElementsByTagName('a');
 let submitButton = document.querySelector('button.mini-suggest__button.button_theme_websearch.button_size_ws-head.i-bem.button_js_inited');
 let sites = {
     "xn----7sbab5aqcbiddtdj1e1g.xn--p1ai":["Гобой","Саксофон","Валторна","Фагот","Скрипка","Флейта","Как звучит флейта"],
@@ -50,7 +51,8 @@ if(submitButton!=undefined){
 }else if (location.hostname == "yandex.ru"){
     let links = document.links;
     let flag = true;
-    let numPage = document.querySelector("span.pager__item").innerText;
+    let numPage = document.querySelector("span.pager__item").innerText
+    let nextPageButton = document.querySelector(".pager__item_kind_next");
     for(let i = 0;i<links.length;i++){
         let link = links[i];
         if(link.href.indexOf(site)!=-1){
@@ -60,7 +62,7 @@ if(submitButton!=undefined){
         }
     }
    if(numPage=="10") location.href = "https://yandex.ru/";
-    if(flag) setTimeout(()=>pnnext.click(),2000);
+    if(flag) setTimeout(()=>nextPageButton.click(),2000);
 }else{
     if (getRandom(0,100)>=80){
         location.href = "https://yandex.ru/";
