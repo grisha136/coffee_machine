@@ -56,7 +56,7 @@ if(submitButton!=undefined){
     for(let i = 0;i<links.length;i++){
         let link = links[i];
         if(link.href.indexOf(site)!=-1){
-            $('a[target="_blank"]').removeAttr('target');
+            link.removeAttribute('target');
             setTimeout(()=>link.click(),2000);
             flag=false;
             break;
