@@ -21,11 +21,11 @@ class Person{
   public function getInfo(){
      return "
      Меня зовут: ".$this->name."<br>
-     Мою маму зовут: ".($this->getMother()->getName())."<br>
+     Мою маму зовут: ".$this->getMother()->getName()."<br>
      Папу моей мамы зовут: ".$this->getMother()->getFather()->getName()."<br>
-     Маму моей мамы зовут: ".($this->getMother()->getMother()->getName())."<br>
-     Моего папу зовут: ".($this->getFather()->getName())."<br>
-     Папу моего папы зовут: ".($this->getFather()->getFather()->getName())."<br>
+     Маму моей мамы зовут: ".$this->getMother()->getMother()->getName()."<br>
+     Моего папу зовут: ".$this->getFather()->getName()."<br>
+     Папу моего папы зовут: ".$this->getFather()->getFather()->getName()."<br>
      Маму моего папы зовут: ".$this->getFather()->getMother()->getName();
   }
 }
