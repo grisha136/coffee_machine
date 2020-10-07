@@ -22,11 +22,11 @@ class Person{
      return "
      Меня зовут: ".$this->name."<br>
      Мою маму зовут: ".($this->getMother()->getName())."<br>
-     Дедушку моей мамы зовут: ".$this->getMother()->getFather()->getName()."<br>
-     Бабушку моей мамы зовут: ".($this->getMother()->getMother()->getName())."<br>
+     Папу моей мамы зовут: ".$this->getMother()->getFather()->getName()."<br>
+     Маму моей мамы зовут: ".($this->getMother()->getMother()->getName())."<br>
      Моего папу зовут: ".($this->getFather()->getName())."<br>
-     Дедушку моего папы зовут: ".($this->getFather()->getFather()->getName())."<br>
-     Бабушку моего папы зовут: ".$this->getFather()->getMother()->getName();
+     Папу моего папы зовут: ".($this->getFather()->getFather()->getName())."<br>
+     Маму моего папы зовут: ".$this->getFather()->getMother()->getName();
   }
 }
 $ksenya = new Person("Ксения","Петрова", 61);
