@@ -21,7 +21,7 @@ class Horse extends Animal {
 }
 
 class Pegasus extends Horse {
-  function fly(){
+    function fly(){
     echo $this-> getNickname()." Igogo, I flew. ";
   }
 }
