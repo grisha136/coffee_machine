@@ -16,13 +16,13 @@ abstract class Animal{
 
 class Horse extends Animal {
     function run(){
-    echo $this-> getNickname()." Igogo, I rode. ";
+    echo $this-> getNickname()." Игого, я поскакал(а). ";
    }
 }
 
 class Pegasus extends Horse {
     function fly(){
-    echo $this-> getNickname()." Igogo, I flew. ";
+    echo $this-> getNickname()." Игого, я полетел(а). ";
   }
 }
 
