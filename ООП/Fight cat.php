@@ -5,7 +5,10 @@ class Cat {
     public $weight;
     public $strength;
     
-   function fight($anotherCat) {
+    function __construct() {
+    }
+    
+    function fight($anotherCat) {
         $score = 0;
         $ageAdvantage = $this->age > $anotherCat->age? 1 : 0;
         $weightAdvantage = $this->weight > $anotherCat->weight? 1 : 0;
